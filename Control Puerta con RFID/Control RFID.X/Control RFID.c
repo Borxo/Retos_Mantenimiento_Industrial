@@ -36,22 +36,29 @@
 void main (void)
 {   
     //Variables Locales//
-    char ContraAsiic [3][12]={
+    /*char ContraAsiic [3][12]={
                                 {'0','A','0','0','6','D','F','8','C','4','5','B'},
                                 {'0','A','0','0','6','D','7','A','B','D','A','0'},
                                 {'0','C','0','0','4','1','D','C','8','9','1','8'}
-                            };
+                            };*/
     char ContraHex[3][14]=   {
                                 {0x02,0x30,0x41,0x30,0x30,0x36,0x44,0x46,0x38,0x43,0x34,0x35,0x42,0x03},
                                 {0x02,0x30,0x41,0x30,0x30,0x36,0x44,0x37,0x41,0x42,0x44,0x41,0x30,0x03},
-                                {0x02,0x30,0x43,0x30,0x30,0x34,0x31,0x44,0x43,0x38,0x39,0x31,0x38,0x03}
                             };
+    /*char ContraHex[3][14]=   {
+                                {0x02,0x30,0x41,0x30,0x30,0x36,0x44,0x46,0x38,0x43,0x34,0x35,0x42,0x03},
+                                {0x02,0x30,0x41,0x30,0x30,0x36,0x44,0x37,0x41,0x42,0x44,0x41,0x30,0x03},
+                                {0x02,0x30,0x43,0x30,0x30,0x34,0x31,0x44,0x43,0x38,0x39,0x31,0x38,0x03}
+                            };*/
     
     char Dato [14]={0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-    
+    int comp=0;
     //Configuración Puertos//
-    TRISA0=0;
+    TRISA1=0;
+    TRISA2=0;
     
+    //Timer1//
+    T1CON=0b00110001;
    //Configuración EUSART//
     CREN=1;
     SYNC=0;
@@ -67,19 +74,32 @@ void main (void)
     
     while(1)
     {
+        TMR1IF=0;
+        
+       /* for (int p=0;p<14;p++)
+        {
+            Dato[p]=0;
+        } */
         
         for(int i=0;i<14;i++)
         {
-            while (RCIF==0);
+            while (RCIF==0 );
             Dato[i]=RCREG;
+            __delay_ms(500);
         }
         
-       if( !memcmp( ContraHex[2], Dato, 14)) 
-       {
-           RA0=1;
-       }
-       else 
-           RA0=0;
-
+      /* for(int z=0;z<2;z++)
+        {
+           comp=strcmp( ContraHex[z], Dato);
+        }*/
+        comp=strcmp( ContraHex[2], Dato);
+          if(comp<0) 
+            {
+            RA1=0;       
+            RA2=1;
+            __delay_ms(5000);
+             RA2=0;
+            }
+        else if (comp>0) {RA1=1;}  
     }
 }
