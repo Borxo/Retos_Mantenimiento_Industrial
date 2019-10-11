@@ -1,11 +1,11 @@
 /*
  * Programa: Control_RFID. 
  * Microcontrolador: PIC16F1936.
- * Autor: Borxo Garc韆.
- * Versi髇:1.0v.
+ * Autor: Borxo Garc铆a.
+ * Versi贸n:1.0v.
  */
 
-//Palabras de configuraci髇
+//Palabras de configuraci贸n
 // CONFIG1
 #pragma config FOSC = INTOSC    
 #pragma config WDTE = OFF       
@@ -67,37 +67,58 @@ void main (void)
                                 {0x02,0x30,0x43,0x30,0x30,0x34,0x31,0x44,0x43,0x38,0x39,0x31,0x38,0x03}
                             };*/
     int comp=0;
-    //Configuraci髇 Puertos//
+    //char com1[14]={0x02,0x30,0x41,0x30,0x30,0x36,0x44,0x46,0x38,0x43,0x34,0x35,0x42,0x03};
+    char com2[14]={0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    //Configuraci贸n Puertos//
     TRISA=0x00;
 
     
-    //Configuraci髇 EUSART//
+    //Configuraci贸n EUSART//
     CREN=1;
     SYNC=0;
     SPEN=1; 
     
-    //Configuraci髇 Baudios//
+    //Configuraci贸n Baudios//
     BRGH=1;
     BRG16=0;
     SPBRG=25;
     
-    //Cnfiguraci髇 Interrupci髇 EUSART//
+    //Cnfiguraci贸n Interrupci贸n EUSART//
     GIE=1;
     PEIE=1;
     RCIE=1;
     
-    //Configuraci髇 del Oscilador//
+    //Configuraci贸n del Oscilador//
     OSCCON=0b01101000; //4Mhz
     
     while (1)
     {
-          comp=strcmp( ContraHex[2], Buffer);
-          if(comp<=0) 
-            {
-              RA2=1;
-              RA1=0;
+        int x=0;
+        do
+        {   
+            for (int y=0;y<14;y++)
+                {
+                    Buffer[y]=0;
+                }
+            PORTA=0x00;
+            
+            comp=memcmp( ContraHex[x], Buffer,14);
+            if(++x==14)x=0;
+            
+        }while ((memcmp( /*'\0'*/com2, Buffer,14))==0);
+        
+        if (comp==0)
+           {
+              PORTA=0b00000010;
+              __delay_ms(3000);
             }
-        else if (comp>=0) {RA1=1;RA2=0;}  
+        else if(comp!=0)
+            {
+               PORTA=0b00000001;
+               __delay_ms(1000);  
+            }
+       
     }
  }
+  
   
