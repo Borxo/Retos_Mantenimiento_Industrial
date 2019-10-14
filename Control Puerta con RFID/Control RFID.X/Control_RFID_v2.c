@@ -35,7 +35,7 @@
 
 //Variables//
 volatile char Buffer[14];
-
+volatile char Flag=0;
 //Funciones//
 void interrupt Recept (void);
 
@@ -43,10 +43,20 @@ void interrupt Recept (void)
 {
     static char i=0; 
     
-    Buffer[i]=RCREG;
-    if(++i==14)
+    if (Flag==0)
+    {
+        while(RCREG==0x02);
+    }
+    else if (Flag==1)
+    {
+        Buffer[i]=RCREG;
+        if(++i==14)
+        {
         i=0;
-    else;
+        Flag=0;
+        }
+        else;
+    }
 }
 
 void main (void)
@@ -94,19 +104,17 @@ void main (void)
     while (1)
     {
         int x=0;
-        do
-        {   
-            for (int y=0;y<14;y++)
-                {
-                    Buffer[y]=0;
-                }
+       
+           memset(Buffer,'\0',14);
+           comp=strncmp( ContraHex[x], Buffer,14);
+           if(++x==3)x=0;
+           
+        if(strncmp( com2, Buffer,14)==0)
+        {
             PORTA=0x00;
-            
-            comp=memcmp( ContraHex[x], Buffer,14);
-            if(++x==14)x=0;
-            
-        }while ((memcmp( /*'\0'*/com2, Buffer,14))==0);
-        
+        }
+        else 
+        {
         if (comp==0)
            {
               PORTA=0b00000010;
@@ -117,8 +125,11 @@ void main (void)
                PORTA=0b00000001;
                __delay_ms(1000);  
             }
+        }
+
+      
+
        
     }
  }
-  
   
