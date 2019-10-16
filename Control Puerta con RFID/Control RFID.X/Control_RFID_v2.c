@@ -1,11 +1,11 @@
 /*
  * Programa: Control_RFID. 
  * Microcontrolador: PIC16F1936.
- * Autor: Borxo Garc铆a.
- * Versi贸n:1.0v.
+ * Autor: Borxo Garc韆.
+ * Versi髇:1.0v.
  */
 
-//Palabras de configuraci贸n
+//Palabras de configuraci髇
 // CONFIG1
 #pragma config FOSC = INTOSC    
 #pragma config WDTE = OFF       
@@ -34,26 +34,32 @@
 #include <string.h>
 
 //Variables//
-volatile char Buffer[14];
-volatile char Flag=0;
+volatile char Buffer[13];
+
+volatile int U=0;;
 //Funciones//
 void interrupt Recept (void);
 
 void interrupt Recept (void)
 {
     static char i=0; 
+    static char Flag=0;
     
     if (Flag==0)
     {
-        while(RCREG==0x02);
-    }
-    else if (Flag==1)
+    while(RCREG==0x02);
+    Flag=1;
+    }    
+    if (Flag==1)
     {
         Buffer[i]=RCREG;
-        if(++i==14)
+        TXREG=Buffer[i];
+        if(++i==13)
         {
         i=0;
         Flag=0;
+        U=1;
+       // __delay_ms(3000);
         }
         else;
     }
@@ -67,9 +73,13 @@ void main (void)
                                 {'0','A','0','0','6','D','7','A','B','D','A','0'},
                                 {'0','C','0','0','4','1','D','C','8','9','1','8'}
                             };*/
-    char ContraHex[2][14]=   {
+    /*char ContraHex[2][14]=   {
                                 {0x02,0x30,0x41,0x30,0x30,0x36,0x44,0x46,0x38,0x43,0x34,0x35,0x42,0x03},
                                 {0x02,0x30,0x41,0x30,0x30,0x36,0x44,0x37,0x41,0x42,0x44,0x41,0x30,0x03},
+                            };*/
+    char ContraHex[2][13]=   {
+                                {0x30,0x41,0x30,0x30,0x36,0x44,0x46,0x38,0x43,0x34,0x35,0x42,0x03},
+                                {0x30,0x41,0x30,0x30,0x36,0x44,0x37,0x41,0x42,0x44,0x41,0x30,0x03},
                             };
     /*char ContraHex[3][14]=   {
                                 {0x02,0x30,0x41,0x30,0x30,0x36,0x44,0x46,0x38,0x43,0x34,0x35,0x42,0x03},
@@ -78,58 +88,59 @@ void main (void)
                             };*/
     int comp=0;
     //char com1[14]={0x02,0x30,0x41,0x30,0x30,0x36,0x44,0x46,0x38,0x43,0x34,0x35,0x42,0x03};
-    char com2[14]={0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-    //Configuraci贸n Puertos//
+    char com2[13]={0,0,0,0,0,0,0,0,0,0,0,0,0};
+    //Configuraci髇 Puertos//
     TRISA=0x00;
 
     
-    //Configuraci贸n EUSART//
+    //Configuraci髇 EUSART//
     CREN=1;
     SYNC=0;
     SPEN=1; 
     
-    //Configuraci贸n Baudios//
+    //Configuraci髇 Baudios//
     BRGH=1;
-    BRG16=0;
-    SPBRG=25;
-    
-    //Cnfiguraci贸n Interrupci贸n EUSART//
+    BRG16=1;
+    SPBRG=103;
+    TXEN = 1;
+    //Cnfiguraci髇 Interrupci髇 EUSART//
     GIE=1;
     PEIE=1;
     RCIE=1;
     
-    //Configuraci贸n del Oscilador//
+    //Configuraci髇 del Oscilador//
     OSCCON=0b01101000; //4Mhz
     
     while (1)
     {
-        int x=0;
-       
-           memset(Buffer,'\0',14);
-           comp=strncmp( ContraHex[x], Buffer,14);
-           if(++x==3)x=0;
+        static int x=0;
+        U=0;
+        //memset(Buffer,'\0',13);
+        PORTA=0x00;
+        while (U==0);
+        GIE=0;
+        do { 
+           comp=strncmp ( ContraHex[x], Buffer,13);
+           if(++x==2)x=0;
+        } while(comp!=0 && x>0);
            
-        if(strncmp( com2, Buffer,14)==0)
-        {
-            PORTA=0x00;
-        }
-        else 
-        {
         if (comp==0)
            {
               PORTA=0b00000010;
               __delay_ms(3000);
+              //memset(Buffer,'\0',13);
             }
-        else if(comp!=0)
+       else //if(comp!=0)
             {
                PORTA=0b00000001;
-               __delay_ms(1000);  
+               __delay_ms(1000);    
             }
-        }
+        GIE=1;
+    }
 
       
 
        
-    }
+   
  }
   
