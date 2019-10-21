@@ -89,8 +89,10 @@ void main (void)
     //char com1[14]={0x02,0x30,0x41,0x30,0x30,0x36,0x44,0x46,0x38,0x43,0x34,0x35,0x42,0x03};
     char com2[13]={0,0,0,0,0,0,0,0,0,0,0,0,0};
     //Configuración Puertos//
-    TRISA=0x00;
-    
+    TRISC7=1;
+    TRISC4=0;
+    TRISC5=0;
+    //TRISA=0x00;
     //Configuración EUSART//
     CREN=1;
     SYNC=0;
@@ -114,14 +116,21 @@ void main (void)
     {
         if (Busqueda()==0)
         {
-            PORTA=0b00000001;
+            //PORTA=0b00000001;
+            
+            PORTC=0b00100000;
             __delay_ms(1000);
+            PORTC=0x00;
+            
         }
         
         else if(Busqueda()==1)
         {
-            PORTA=0b00000010;
+            //PORTA=0b00000010;
+            PORTC=0b00010000;
             __delay_ms(3000);
+            PORTC=0x00;
+           
         }
     }
 }
@@ -129,7 +138,7 @@ void main (void)
 int Busqueda ()
 {   
     int comp=0;
-    int y=0;
+    int x=0;
     char ContraHex[2][13]=   {
                                 {0x30,0x41,0x30,0x30,0x36,0x44,0x46,0x38,0x43,0x34,0x35,0x42,0x03},
                                 {0x30,0x41,0x30,0x30,0x36,0x44,0x37,0x41,0x42,0x44,0x41,0x30,0x03},
@@ -140,11 +149,15 @@ int Busqueda ()
     U=0;
     while(U==0);
     
-    while(comp!=0 && y==2)
+    /*while(comp!=0 && y>2)
     {
        comp=strncmp ( ContraHex[y], Buffer,13); 
        y++;
-    }
+    }*/
+    do { 
+           comp=strncmp ( ContraHex[x], Buffer,13);
+           if(++x==2)x=0;
+        } while(comp!=0 && x>0);
     
     if(comp==0)
     {
