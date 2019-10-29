@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v1.38\dat\en_msgs.txt -cs \
   -h+dist/default/production\Control_RFID.X.production.sym \
   --cmf=dist/default/production\Control_RFID.X.production.cmf -z -Q16F1936 \
-  -oC:\Users\BORJAG~1\AppData\Local\Temp\s4jg.2 \
+  -oC:\Users\BORJAG~1\AppData\Local\Temp\s5p0.2 \
   -Mdist/default/production/Control_RFID.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=02079h-021efh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -30,7 +30,7 @@ Linker command line:
   -pconfig=CONFIG -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.obj \
+  C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.obj \
   dist/default/production\Control_RFID.X.production.obj 
 
 Object code version is 3.11
@@ -40,7 +40,7 @@ Machine type is 16F1936
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.obj
+C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.obj
                 end_init                             39       39        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2    1000E       0
@@ -635,7 +635,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 67 in file "Control_v3.c"
+		line 67 in file "Control_v4.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -665,7 +665,7 @@ Total ram usage:       18 bytes
 
  *************** function _Busqueda *****************
  Defined at:
-		line 139 in file "Control_v3.c"
+		line 140 in file "Control_v4.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -765,7 +765,7 @@ Total ram usage:        4 bytes
 
  *************** function _Recept *****************
  Defined at:
-		line 43 in file "Control_v3.c"
+		line 43 in file "Control_v4.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -796,6 +796,13 @@ Total ram usage:        2 bytes
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
+Control_v4.c
+		_Recept        		CODE           	0004	0000	54
+		_main          		CODE           	00AF	0000	88
+		_Busqueda      		CODE           	0054	0000	92
+
+Control_v4.c estimated size: 234
+
 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strncmp.c
 		_strncmp       		CODE           	0106	0000	63
 
@@ -810,11 +817,4 @@ shared
 		__initialization		CODE           	003B	0000	22
 
 shared estimated size: 22
-
-Control_v3.c
-		_Recept        		CODE           	0004	0000	54
-		_main          		CODE           	00AF	0000	88
-		_Busqueda      		CODE           	0054	0000	92
-
-Control_v3.c estimated size: 234
 

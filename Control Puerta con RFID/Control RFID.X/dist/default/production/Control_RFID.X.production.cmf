@@ -27,7 +27,7 @@ idataBANK1 CODE 0 144 144 1A 2
 dataBANK1 BANK1 1 A0 A0 1A 1
 clrtext CODE 0 175 175 6 2
 bssCOMMON COMMON 1 7A 7A 2 1
-$C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.obj
+$C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.obj
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 39 39 2 2
 config CONFIG 0 8007 8007 2 2
@@ -112,43 +112,43 @@ STRING 17B-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Control_RFID.X.production.obj
-3B cinit CODE >501:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-3B cinit CODE >504:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-3B cinit CODE >549:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-3C cinit CODE >550:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-3D cinit CODE >551:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-3E cinit CODE >552:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-3F cinit CODE >553:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-40 cinit CODE >554:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-41 cinit CODE >555:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-42 cinit CODE >556:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-43 cinit CODE >557:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-44 cinit CODE >558:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-47 cinit CODE >575:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-48 cinit CODE >576:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-49 cinit CODE >580:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-4A cinit CODE >581:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-4B cinit CODE >582:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-4C cinit CODE >583:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-4D cinit CODE >584:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-4E cinit CODE >585:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-50 cinit CODE >591:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-50 cinit CODE >593:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-51 cinit CODE >594:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-52 cinit CODE >595:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
+3B cinit CODE >501:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+3B cinit CODE >504:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+3B cinit CODE >549:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+3C cinit CODE >550:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+3D cinit CODE >551:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+3E cinit CODE >552:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+3F cinit CODE >553:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+40 cinit CODE >554:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+41 cinit CODE >555:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+42 cinit CODE >556:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+43 cinit CODE >557:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+44 cinit CODE >558:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+47 cinit CODE >575:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+48 cinit CODE >576:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+49 cinit CODE >580:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+4A cinit CODE >581:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+4B cinit CODE >582:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+4C cinit CODE >583:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+4D cinit CODE >584:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+4E cinit CODE >585:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+50 cinit CODE >591:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+50 cinit CODE >593:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+51 cinit CODE >594:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+52 cinit CODE >595:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
 4 intentry CODE >51:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul8.c
-4 intentry CODE >43:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-9 intentry CODE >48:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-C intentry CODE >50:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-11 intentry CODE >51:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-13 intentry CODE >53:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-16 intentry CODE >55:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-1F intentry CODE >56:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-25 intentry CODE >57:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-2D intentry CODE >59:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-2E intentry CODE >60:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-2F intentry CODE >61:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-34 intentry CODE >65:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
+4 intentry CODE >43:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+9 intentry CODE >48:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+C intentry CODE >50:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+11 intentry CODE >51:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+13 intentry CODE >53:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+16 intentry CODE >55:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+1F intentry CODE >56:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+25 intentry CODE >57:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+2D intentry CODE >59:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+2E intentry CODE >60:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+2F intentry CODE >61:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+34 intentry CODE >65:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
 15E text3 CODE >4:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul8.c
 15F text3 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul8.c
 160 text3 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul8.c
@@ -166,61 +166,61 @@ C intentry CODE >50:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con R
 13C text2 CODE >11:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strncmp.c
 140 text2 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strncmp.c
 141 text2 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strncmp.c
-54 text1 CODE >139:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-54 text1 CODE >141:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-57 text1 CODE >142:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-59 text1 CODE >146:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-67 text1 CODE >147:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-68 text1 CODE >150:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-6A text1 CODE >151:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-6E text1 CODE >159:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-88 text1 CODE >160:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-93 text1 CODE >161:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-A2 text1 CODE >163:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-A7 text1 CODE >165:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-AB text1 CODE >166:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-AC text1 CODE >167:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-AF maintext CODE >67:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-AF maintext CODE >88:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-B2 maintext CODE >90:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-C1 maintext CODE >92:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-C3 maintext CODE >93:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-C4 maintext CODE >94:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-C5 maintext CODE >97:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-C7 maintext CODE >98:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-C8 maintext CODE >99:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-C9 maintext CODE >102:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-CA maintext CODE >103:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-CB maintext CODE >104:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-CD maintext CODE >105:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-CE maintext CODE >108:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-CF maintext CODE >109:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-D0 maintext CODE >110:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-D2 maintext CODE >113:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-D4 maintext CODE >117:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-D5 maintext CODE >121:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-D7 maintext CODE >122:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-E4 maintext CODE >123:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-E6 maintext CODE >117:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-EE maintext CODE >127:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-F6 maintext CODE >130:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-F8 maintext CODE >132:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
-175 clrtext CODE >564:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-175 clrtext CODE >565:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-176 clrtext CODE >566:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-176 clrtext CODE >567:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-177 clrtext CODE >568:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-178 clrtext CODE >569:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-179 clrtext CODE >570:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-17A clrtext CODE >571:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-16F inittext CODE >538:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-16F inittext CODE >539:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-170 inittext CODE >540:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-170 inittext CODE >541:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-171 inittext CODE >542:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-172 inittext CODE >543:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-173 inittext CODE >544:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
-174 inittext CODE >545:C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.
+54 text1 CODE >140:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+54 text1 CODE >142:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+57 text1 CODE >143:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+59 text1 CODE >147:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+67 text1 CODE >148:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+68 text1 CODE >151:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+6A text1 CODE >152:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+6E text1 CODE >160:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+88 text1 CODE >161:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+93 text1 CODE >162:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+A2 text1 CODE >164:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+A7 text1 CODE >166:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+AB text1 CODE >167:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+AC text1 CODE >168:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+AF maintext CODE >67:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+AF maintext CODE >88:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+B2 maintext CODE >90:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+C1 maintext CODE >92:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+C3 maintext CODE >93:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+C4 maintext CODE >94:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+C5 maintext CODE >97:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+C7 maintext CODE >98:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+C8 maintext CODE >99:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+C9 maintext CODE >102:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+CA maintext CODE >103:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+CB maintext CODE >104:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+CD maintext CODE >105:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+CE maintext CODE >108:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+CF maintext CODE >109:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+D0 maintext CODE >110:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+D2 maintext CODE >113:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+D4 maintext CODE >117:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+D5 maintext CODE >122:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+D7 maintext CODE >123:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+E4 maintext CODE >124:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+E6 maintext CODE >117:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+EE maintext CODE >128:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+F6 maintext CODE >132:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+F8 maintext CODE >133:Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
+175 clrtext CODE >564:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+175 clrtext CODE >565:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+176 clrtext CODE >566:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+176 clrtext CODE >567:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+177 clrtext CODE >568:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+178 clrtext CODE >569:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+179 clrtext CODE >570:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+17A clrtext CODE >571:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+16F inittext CODE >538:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+16F inittext CODE >539:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+170 inittext CODE >540:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+170 inittext CODE >541:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+171 inittext CODE >542:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+172 inittext CODE >543:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+173 inittext CODE >544:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
+174 inittext CODE >545:C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -257,11 +257,11 @@ _RCIE 48D 0 ABS 0 - dist/default/production\Control_RFID.X.production.obj
 _SPEN CEF 0 ABS 0 - dist/default/production\Control_RFID.X.production.obj
 _SYNC CF4 0 ABS 0 - dist/default/production\Control_RFID.X.production.obj
 _TXEN CF5 0 ABS 0 - dist/default/production\Control_RFID.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.obj
+___sp 0 0 STACK 2 stack C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.obj
 _main 15E 0 CODE 0 maintext dist/default/production\Control_RFID.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\Control_RFID.X.production.obj
 ltemp 7E 0 ABS 0 - dist/default/production\Control_RFID.X.production.obj
-start 72 0 CODE 0 init C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.obj
+start 72 0 CODE 0 init C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.obj
 ttemp 7E 0 ABS 0 - dist/default/production\Control_RFID.X.production.obj
 wtemp 7E 0 ABS 0 - dist/default/production\Control_RFID.X.production.obj
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\Control_RFID.X.production.obj
@@ -275,12 +275,12 @@ ttemp1 81 0 ABS 0 - dist/default/production\Control_RFID.X.production.obj
 ttemp2 84 0 ABS 0 - dist/default/production\Control_RFID.X.production.obj
 ttemp3 87 0 ABS 0 - dist/default/production\Control_RFID.X.production.obj
 ttemp4 7F 0 ABS 0 - dist/default/production\Control_RFID.X.production.obj
-intlevel0 0 0 CODE 0 functab C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.obj
-intlevel1 0 0 CODE 0 functab C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.obj
-intlevel2 0 0 CODE 0 functab C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.obj
-intlevel3 0 0 CODE 0 functab C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.obj
-intlevel4 0 0 CODE 0 functab C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.obj
-intlevel5 0 0 CODE 0 functab C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.obj
+intlevel0 0 0 CODE 0 functab C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.obj
+intlevel1 0 0 CODE 0 functab C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.obj
+intlevel2 0 0 CODE 0 functab C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.obj
+intlevel3 0 0 CODE 0 functab C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.obj
+intlevel4 0 0 CODE 0 functab C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.obj
+intlevel5 0 0 CODE 0 functab C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.obj
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 ___bmul@multiplicand 72 0 COMMON 1 cstackCOMMON dist/default/production\Control_RFID.X.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production\Control_RFID.X.production.obj
@@ -315,7 +315,7 @@ _TRISC5 475 0 ABS 0 - dist/default/production\Control_RFID.X.production.obj
 _TRISC7 477 0 ABS 0 - dist/default/production\Control_RFID.X.production.obj
 __end_of_Busqueda 15E 0 CODE 0 text1 dist/default/production\Control_RFID.X.production.obj
 Busqueda@comp 40 0 BANK0 1 cstackBANK0 dist/default/production\Control_RFID.X.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.obj
+___int_sp 0 0 STACK 2 stack C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -457,7 +457,7 @@ __S1 C9 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.obj
 Busqueda@ContraHex 26 0 BANK0 1 cstackBANK0 dist/default/production\Control_RFID.X.production.obj
 __pdataBANK1 A0 0 BANK1 1 dataBANK1 dist/default/production\Control_RFID.X.production.obj
 __size_of___bmul 0 0 ABS 0 - dist/default/production\Control_RFID.X.production.obj
@@ -496,8 +496,8 @@ __Hinittext 0 0 ABS 0 inittext -
 main@F3326 47 0 BANK0 1 bssBANK0 dist/default/production\Control_RFID.X.production.obj
 main@com2 BA 0 BANK1 1 cstackBANK1 dist/default/production\Control_RFID.X.production.obj
 main@comp C7 0 BANK1 1 cstackBANK1 dist/default/production\Control_RFID.X.production.obj
-stackhi 21EF 0 ABS 0 - C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.obj
-stacklo 2079 0 ABS 0 - C:\Users\BORJAG~1\AppData\Local\Temp\s4jg.obj
+stackhi 21EF 0 ABS 0 - C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.obj
+stacklo 2079 0 ABS 0 - C:\Users\BORJAG~1\AppData\Local\Temp\s5p0.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\Control_RFID.X.production.obj
 Busqueda@x 42 0 BANK0 1 cstackBANK0 dist/default/production\Control_RFID.X.production.obj
 __Lspace_0 0 0 ABS 0 - -

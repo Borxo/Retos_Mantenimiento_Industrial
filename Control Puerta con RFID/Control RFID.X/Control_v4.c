@@ -118,7 +118,8 @@ void main (void)
         {
             //PORTA=0b00000001;
             
-            PORTC=0b00100000;
+            
+            PORTC=0b00010000;
             __delay_ms(1000);
             PORTC=0x00;
             
@@ -127,7 +128,8 @@ void main (void)
         else if(Busqueda()==1)
         {
             //PORTA=0b00000010;
-            PORTC=0b00010000;
+            
+            PORTC=0b00100000;
             __delay_ms(3000);
             PORTC=0x00;
            

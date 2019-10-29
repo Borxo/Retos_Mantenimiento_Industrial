@@ -15,11 +15,11 @@
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"43 Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
+"43 Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
 [v _Recept Recept `II(v  1 e 1 0 ]
 "67
 [v _main main `(v  1 e 1 0 ]
-"139
+"140
 [v _Busqueda Busqueda `(i  1 e 2 0 ]
 "414 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f1936.h
 [v _PORTA PORTA `VEuc  1 e 1 @12 ]
@@ -57,7 +57,7 @@
 [v _TRISC7 TRISC7 `VEb  1 e 0 @1143 ]
 "8163
 [v _TXEN TXEN `VEb  1 e 0 @3317 ]
-"37 Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
+"37 Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
 [v _Buffer Buffer `VE[13]uc  1 e 13 0 ]
 "38
 [v _U U `VEi  1 e 2 0 ]
@@ -69,20 +69,20 @@
 "88
 [v main@comp comp `i  1 a 2 13 ]
 [v main@F3326 F3326 `[13]uc  1 s 13 F3326 ]
-"137
+"138
 } 0
-"139
+"140
 [v _Busqueda Busqueda `(i  1 e 2 0 ]
 {
-"143
+"144
 [v Busqueda@ContraHex ContraHex `[2][13]uc  1 a 26 6 ]
-"142
+"143
 [v Busqueda@x x `i  1 a 2 34 ]
-"141
-[v Busqueda@comp comp `i  1 a 2 32 ]
 "142
+[v Busqueda@comp comp `i  1 a 2 32 ]
+"143
 [v Busqueda@F3334 F3334 `[2][13]uc  1 s 26 F3334 ]
-"169
+"170
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strncmp.c
 [v _strncmp strncmp `(i  1 e 2 0 ]
@@ -107,7 +107,7 @@
 [v ___bmul@multiplier multiplier `uc  1 a 1 5 ]
 "51
 } 0
-"43 Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v3.c
+"43 Z:\Github\Retos_Matenimiento_Industrial\Control Puerta con RFID\Control RFID.X\Control_v4.c
 [v _Recept Recept `II(v  1 e 1 0 ]
 {
 "45

@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.38 build -256452561 
-                                                                                               Mon Oct 21 18:28:14 2019
+                                                                                               Tue Oct 29 18:40:27 2019
 
 Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010351
      1                           	processor	16F1936
@@ -415,7 +415,7 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    409 ;;
    410 ;; *************** function _main *****************
    411 ;; Defined at:
-   412 ;;		line 67 in file "Control_v3.c"
+   412 ;;		line 67 in file "Control_v4.c"
    413 ;; Parameters:    Size  Location     Type
    414 ;;		None
    415 ;; Auto vars:     Size  Location     Type
@@ -447,7 +447,7 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    441                           ;psect for function _main
    442  00AF                     _main:	
    443                           
-   444                           ;Control_v3.c: 88: int comp=0;
+   444                           ;Control_v4.c: 88: int comp=0;
    445                           
    446                           ;incstack = 0
    447                           ; Regs used in _main: [wreg-fsr1h+status,2+status,0+pclath+cstack]
@@ -455,7 +455,7 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    449  00B0  01C7               	clrf	main@comp^(0+128)
    450  00B1  01C8               	clrf	(main@comp+1)^(0+128)
    451                           
-   452                           ;Control_v3.c: 90: char com2[13]={0,0,0,0,0,0,0,0,0,0,0,0,0};
+   452                           ;Control_v4.c: 90: char com2[13]={0,0,0,0,0,0,0,0,0,0,0,0,0};
    453  00B2  3047               	movlw	low main@F3326
    454  00B3  0086               	movwf	6
    455  00B4  3000               	movlw	high main@F3326
@@ -473,61 +473,61 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    467  00BF  0BC4               	decfsz	??_main,f
    468  00C0  28BD               	goto	u480
    469                           
-   470                           ;Control_v3.c: 92: TRISC7=1;
+   470                           ;Control_v4.c: 92: TRISC7=1;
    471  00C1  0021               	movlb	1	; select bank1
    472  00C2  178E               	bsf	14,7	;volatile
    473                           
-   474                           ;Control_v3.c: 93: TRISC4=0;
+   474                           ;Control_v4.c: 93: TRISC4=0;
    475  00C3  120E               	bcf	14,4	;volatile
    476                           
-   477                           ;Control_v3.c: 94: TRISC5=0;
+   477                           ;Control_v4.c: 94: TRISC5=0;
    478  00C4  128E               	bcf	14,5	;volatile
    479                           
-   480                           ;Control_v3.c: 97: CREN=1;
+   480                           ;Control_v4.c: 97: CREN=1;
    481  00C5  0023               	movlb	3	; select bank3
    482  00C6  161D               	bsf	29,4	;volatile
    483                           
-   484                           ;Control_v3.c: 98: SYNC=0;
+   484                           ;Control_v4.c: 98: SYNC=0;
    485  00C7  121E               	bcf	30,4	;volatile
    486                           
-   487                           ;Control_v3.c: 99: SPEN=1;
+   487                           ;Control_v4.c: 99: SPEN=1;
    488  00C8  179D               	bsf	29,7	;volatile
    489                           
-   490                           ;Control_v3.c: 102: BRGH=1;
+   490                           ;Control_v4.c: 102: BRGH=1;
    491  00C9  151E               	bsf	30,2	;volatile
    492                           
-   493                           ;Control_v3.c: 103: BRG16=1;
+   493                           ;Control_v4.c: 103: BRG16=1;
    494  00CA  159F               	bsf	31,3	;volatile
    495                           
-   496                           ;Control_v3.c: 104: SPBRG=103;
+   496                           ;Control_v4.c: 104: SPBRG=103;
    497  00CB  3067               	movlw	103
    498  00CC  009B               	movwf	27	;volatile
    499                           
-   500                           ;Control_v3.c: 105: TXEN = 1;
+   500                           ;Control_v4.c: 105: TXEN = 1;
    501  00CD  169E               	bsf	30,5	;volatile
    502                           
-   503                           ;Control_v3.c: 108: GIE=1;
+   503                           ;Control_v4.c: 108: GIE=1;
    504  00CE  178B               	bsf	11,7	;volatile
    505                           
-   506                           ;Control_v3.c: 109: PEIE=1;
+   506                           ;Control_v4.c: 109: PEIE=1;
    507  00CF  170B               	bsf	11,6	;volatile
    508                           
-   509                           ;Control_v3.c: 110: RCIE=1;
+   509                           ;Control_v4.c: 110: RCIE=1;
    510  00D0  0021               	movlb	1	; select bank1
    511  00D1  1691               	bsf	17,5	;volatile
    512                           
-   513                           ;Control_v3.c: 113: OSCCON=0b01101000;
+   513                           ;Control_v4.c: 113: OSCCON=0b01101000;
    514  00D2  3068               	movlw	104
    515  00D3  0099               	movwf	25	;volatile
    516  00D4  28E6               	goto	l915
    517  00D5                     l917:	
    518                           
-   519                           ;Control_v3.c: 118: {
-   520                           ;Control_v3.c: 121: PORTC=0b00100000;
-   521  00D5  3020               	movlw	32
+   519                           ;Control_v4.c: 118: {
+   520                           ;Control_v4.c: 122: PORTC=0b00010000;
+   521  00D5  3010               	movlw	16
    522  00D6  008E               	movwf	14	;volatile
    523                           
-   524                           ;Control_v3.c: 122: _delay((unsigned long)((1000)*(4000000/4000.0)));
+   524                           ;Control_v4.c: 123: _delay((unsigned long)((1000)*(4000000/4000.0)));
    525  00D7  3006               	movlw	6
    526  00D8  00C6               	movwf	??_main+2
    527  00D9  3013               	movlw	19
@@ -544,17 +544,17 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    538  00E3  3200               	nop2
    539  00E4                     L1:	
    540                           
-   541                           ;Control_v3.c: 123: PORTC=0x00;
+   541                           ;Control_v4.c: 124: PORTC=0x00;
    542  00E4  0020               	movlb	0	; select bank0
    543  00E5  018E               	clrf	14	;volatile
    544  00E6                     l915:	
-   545                           ;Control_v3.c: 115: while (1)
+   545                           ;Control_v4.c: 115: while (1)
    546                           
-   547                           ;Control_v3.c: 125: }
+   547                           ;Control_v4.c: 126: }
    548                           
    549                           
-   550                           ;Control_v3.c: 116: {
-   551                           ;Control_v3.c: 117: if (Busqueda()==0)
+   550                           ;Control_v4.c: 116: {
+   551                           ;Control_v4.c: 117: if (Busqueda()==0)
    552  00E6  3180  2054  3180   	fcall	_Busqueda
    553  00E9  0020               	movlb	0	; select bank0
    554  00EA  0822               	movf	?_Busqueda,w
@@ -562,7 +562,7 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    556  00EC  1903               	btfsc	3,2
    557  00ED  28D5               	goto	l917
    558                           
-   559                           ;Control_v3.c: 127: else if(Busqueda()==1)
+   559                           ;Control_v4.c: 128: else if(Busqueda()==1)
    560  00EE  3180  2054  3180   	fcall	_Busqueda
    561  00F1  0020               	movlb	0	; select bank0
    562  00F2  0322               	decf	?_Busqueda,w
@@ -570,12 +570,12 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    564  00F4  1D03               	btfss	3,2
    565  00F5  28E6               	goto	l915
    566                           
-   567                           ;Control_v3.c: 128: {
-   568                           ;Control_v3.c: 130: PORTC=0b00010000;
-   569  00F6  3010               	movlw	16
+   567                           ;Control_v4.c: 129: {
+   568                           ;Control_v4.c: 132: PORTC=0b00100000;
+   569  00F6  3020               	movlw	32
    570  00F7  008E               	movwf	14	;volatile
    571                           
-   572                           ;Control_v3.c: 132: _delay((unsigned long)((3000)*(4000000/4000.0)));
+   572                           ;Control_v4.c: 133: _delay((unsigned long)((3000)*(4000000/4000.0)));
    573  00F8  3010               	movlw	16
    574  00F9  00C6               	movwf	??_main+2
    575  00FA  3039               	movlw	57
@@ -592,14 +592,14 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    586  0104  3200               	nop2
    587  0105  28E4               	goto	L1
    588  0106                     __end_of_main:	
-   589                           ;Control_v3.c: 133: PORTC=0x00;
+   589                           ;Control_v4.c: 134: PORTC=0x00;
    590                           
    591                           
    592                           	psect	text1
    593  0054                     __ptext1:	
    594 ;; *************** function _Busqueda *****************
    595 ;; Defined at:
-   596 ;;		line 139 in file "Control_v3.c"
+   596 ;;		line 140 in file "Control_v4.c"
    597 ;; Parameters:    Size  Location     Type
    598 ;;		None
    599 ;; Auto vars:     Size  Location     Type
@@ -634,7 +634,7 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    628                           ;psect for function _Busqueda
    629  0054                     _Busqueda:	
    630                           
-   631                           ;Control_v3.c: 141: int comp=0;
+   631                           ;Control_v4.c: 142: int comp=0;
    632                           
    633                           ;incstack = 0
    634                           ; Regs used in _Busqueda: [wreg-fsr1h+status,2+status,0+pclath+cstack]
@@ -642,14 +642,14 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    636  0055  01C0               	clrf	Busqueda@comp
    637  0056  01C1               	clrf	Busqueda@comp+1
    638                           
-   639                           ;Control_v3.c: 142: int x=0;
+   639                           ;Control_v4.c: 143: int x=0;
    640  0057  01C2               	clrf	Busqueda@x
    641  0058  01C3               	clrf	Busqueda@x+1
    642                           
-   643                           ;Control_v3.c: 143: char ContraHex[2][13]= {
-   644                           ;Control_v3.c: 144: {0x30,0x41,0x30,0x30,0x36,0x44,0x46,0x38,0x43,0x34,0x35,0x42,0x03},
-   645                           ;Control_v3.c: 145: {0x30,0x41,0x30,0x30,0x36,0x44,0x37,0x41,0x42,0x44,0x41,0x30,0x03},
-   646                           ;Control_v3.c: 146: };
+   643                           ;Control_v4.c: 144: char ContraHex[2][13]= {
+   644                           ;Control_v4.c: 145: {0x30,0x41,0x30,0x30,0x36,0x44,0x46,0x38,0x43,0x34,0x35,0x42,0x03},
+   645                           ;Control_v4.c: 146: {0x30,0x41,0x30,0x30,0x36,0x44,0x37,0x41,0x42,0x44,0x41,0x30,0x03},
+   646                           ;Control_v4.c: 147: };
    647  0059  30A0               	movlw	low Busqueda@F3334
    648  005A  0086               	movwf	6
    649  005B  3000               	movlw	high Busqueda@F3334
@@ -666,24 +666,24 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    660  0065  0BA4               	decfsz	??_Busqueda,f
    661  0066  2863               	goto	u420
    662                           
-   663                           ;Control_v3.c: 147: PORTA=0x00;
+   663                           ;Control_v4.c: 148: PORTA=0x00;
    664  0067  018C               	clrf	12	;volatile
    665                           
-   666                           ;Control_v3.c: 150: U=0;
+   666                           ;Control_v4.c: 151: U=0;
    667  0068  01D4               	clrf	_U	;volatile
    668  0069  01D5               	clrf	_U+1	;volatile
    669  006A                     l859:	
-   670                           ;Control_v3.c: 151: while(U==0);
+   670                           ;Control_v4.c: 152: while(U==0);
    671                           
    672  006A  0854               	movf	_U,w	;volatile
    673  006B  0455               	iorwf	_U+1,w	;volatile
    674  006C  1903               	btfsc	3,2
    675  006D  286A               	goto	l859
    676  006E                     l861:	
-   677                           ;Control_v3.c: 158: do {
+   677                           ;Control_v4.c: 159: do {
    678                           
    679                           
-   680                           ;Control_v3.c: 159: comp=strncmp ( ContraHex[x], Buffer,13);
+   680                           ;Control_v4.c: 160: comp=strncmp ( ContraHex[x], Buffer,13);
    681  006E  3056               	movlw	(low (_Buffer| 0))& (0+255)
    682  006F  0020               	movlb	0	; select bank0
    683  0070  00A4               	movwf	??_Busqueda
@@ -707,7 +707,7 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    701  0086  0876               	movf	?_strncmp,w
    702  0087  00C0               	movwf	Busqueda@comp
    703                           
-   704                           ;Control_v3.c: 160: if(++x==2)x=0;
+   704                           ;Control_v4.c: 161: if(++x==2)x=0;
    705  0088  3001               	movlw	1
    706  0089  07C2               	addwf	Busqueda@x,f
    707  008A  3000               	movlw	0
@@ -721,7 +721,7 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    715  0092  01C3               	clrf	Busqueda@x+1
    716  0093                     l867:	
    717                           
-   718                           ;Control_v3.c: 161: } while(comp!=0 && x>0);
+   718                           ;Control_v4.c: 162: } while(comp!=0 && x>0);
    719  0093  0840               	movf	Busqueda@comp,w
    720  0094  0441               	iorwf	Busqueda@comp+1,w
    721  0095  1903               	btfsc	3,2
@@ -740,25 +740,25 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    734  00A1  286E               	goto	l861
    735  00A2                     l871:	
    736                           
-   737                           ;Control_v3.c: 163: if(comp==0)
+   737                           ;Control_v4.c: 164: if(comp==0)
    738  00A2  0020               	movlb	0	; select bank0
    739  00A3  0840               	movf	Busqueda@comp,w
    740  00A4  0441               	iorwf	Busqueda@comp+1,w
    741  00A5  1D03               	btfss	3,2
    742  00A6  28AC               	goto	l879
    743                           
-   744                           ;Control_v3.c: 164: {
-   745                           ;Control_v3.c: 165: return (1);
+   744                           ;Control_v4.c: 165: {
+   745                           ;Control_v4.c: 166: return (1);
    746  00A7  3001               	movlw	1
    747  00A8  00A2               	movwf	?_Busqueda
    748  00A9  3000               	movlw	0
    749  00AA  00A3               	movwf	?_Busqueda+1
    750                           
-   751                           ;Control_v3.c: 166: }
+   751                           ;Control_v4.c: 167: }
    752  00AB  0008               	return
    753  00AC                     l879:	
    754                           
-   755                           ;Control_v3.c: 167: else return (0);
+   755                           ;Control_v4.c: 168: else return (0);
    756  00AC  01A2               	clrf	?_Busqueda
    757  00AD  01A3               	clrf	?_Busqueda+1
    758  00AE  0008               	return
@@ -942,7 +942,7 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    936  0004                     __pintentry:	
    937 ;; *************** function _Recept *****************
    938 ;; Defined at:
-   939 ;;		line 43 in file "Control_v3.c"
+   939 ;;		line 43 in file "Control_v4.c"
    940 ;; Parameters:    Size  Location     Type
    941 ;;		None
    942 ;; Auto vars:     Size  Location     Type
@@ -980,15 +980,15 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    974  0007  087F               	movf	127,w
    975  0008  00F1               	movwf	??_Recept+1
    976                           
-   977                           ;Control_v3.c: 45: static char i=0;
-   978                           ;Control_v3.c: 46: static char Flag=0;
-   979                           ;Control_v3.c: 48: if (Flag==0)
+   977                           ;Control_v4.c: 45: static char i=0;
+   978                           ;Control_v4.c: 46: static char Flag=0;
+   979                           ;Control_v4.c: 48: if (Flag==0)
    980  0009  087A               	movf	Recept@Flag,w
    981  000A  1D03               	btfss	3,2
    982  000B  2813               	goto	i1l767
    983  000C                     i1l765:	
-   984                           ;Control_v3.c: 49: {
-   985                           ;Control_v3.c: 50: while(RCREG==0x02);
+   984                           ;Control_v4.c: 49: {
+   985                           ;Control_v4.c: 50: while(RCREG==0x02);
    986                           
    987  000C  3002               	movlw	2
    988  000D  0023               	movlb	3	; select bank3
@@ -996,19 +996,19 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    990  000F  1903               	btfsc	3,2
    991  0010  280C               	goto	i1l765
    992                           
-   993                           ;Control_v3.c: 51: Flag=1;
+   993                           ;Control_v4.c: 51: Flag=1;
    994  0011  01FA               	clrf	Recept@Flag
    995  0012  0AFA               	incf	Recept@Flag,f
    996  0013                     i1l767:	
    997                           
-   998                           ;Control_v3.c: 52: }
-   999                           ;Control_v3.c: 53: if (Flag==1)
+   998                           ;Control_v4.c: 52: }
+   999                           ;Control_v4.c: 53: if (Flag==1)
   1000  0013  037A               	decf	Recept@Flag,w
   1001  0014  1D03               	btfss	3,2
   1002  0015  2834               	goto	i1l60
   1003                           
-  1004                           ;Control_v3.c: 54: {
-  1005                           ;Control_v3.c: 55: Buffer[i]=RCREG;
+  1004                           ;Control_v4.c: 54: {
+  1005                           ;Control_v4.c: 55: Buffer[i]=RCREG;
   1006  0016  0023               	movlb	3	; select bank3
   1007  0017  0819               	movf	25,w	;volatile
   1008  0018  00F0               	movwf	??_Recept
@@ -1019,7 +1019,7 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
   1013  001D  0870               	movf	??_Recept,w
   1014  001E  0081               	movwf	1
   1015                           
-  1016                           ;Control_v3.c: 56: TXREG=Buffer[i];
+  1016                           ;Control_v4.c: 56: TXREG=Buffer[i];
   1017  001F  087B               	movf	Recept@i,w
   1018  0020  3E56               	addlw	(low (_Buffer| 0))& (0+255)
   1019  0021  0086               	movwf	6
@@ -1027,7 +1027,7 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
   1021  0023  0801               	movf	1,w
   1022  0024  009A               	movwf	26	;volatile
   1023                           
-  1024                           ;Control_v3.c: 57: if(++i==13)
+  1024                           ;Control_v4.c: 57: if(++i==13)
   1025  0025  3001               	movlw	1
   1026  0026  00F0               	movwf	??_Recept
   1027  0027  0870               	movf	??_Recept,w
@@ -1037,23 +1037,23 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
   1031  002B  1D03               	btfss	3,2
   1032  002C  2834               	goto	i1l60
   1033                           
-  1034                           ;Control_v3.c: 58: {
-  1035                           ;Control_v3.c: 59: i=0;
+  1034                           ;Control_v4.c: 58: {
+  1035                           ;Control_v4.c: 59: i=0;
   1036  002D  01FB               	clrf	Recept@i
   1037                           
-  1038                           ;Control_v3.c: 60: Flag=0;
+  1038                           ;Control_v4.c: 60: Flag=0;
   1039  002E  01FA               	clrf	Recept@Flag
   1040                           
-  1041                           ;Control_v3.c: 61: U=1;
+  1041                           ;Control_v4.c: 61: U=1;
   1042  002F  3001               	movlw	1
   1043  0030  0020               	movlb	0	; select bank0
   1044  0031  00D4               	movwf	_U	;volatile
   1045  0032  3000               	movlw	0
   1046  0033  00D5               	movwf	_U+1	;volatile
   1047  0034                     i1l60:	
-  1048                           ;Control_v3.c: 63: else;
+  1048                           ;Control_v4.c: 63: else;
   1049                           
-  1050                           ;Control_v3.c: 62: }
+  1050                           ;Control_v4.c: 62: }
   1051                           
   1052  0034  0871               	movf	??_Recept+1,w
   1053  0035  0020               	movlb	0	; select bank0
@@ -1313,7 +1313,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.38 build -256452561 
-Symbol Table                                                                                   Mon Oct 21 18:28:14 2019
+Symbol Table                                                                                   Tue Oct 29 18:40:27 2019
 
                       _U 0054           ___bmul@product 0074              __CFG_CP$OFF 0000  
                     l520 0107                      l831 0137                      l833 0141  

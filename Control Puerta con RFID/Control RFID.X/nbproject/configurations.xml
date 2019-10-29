@@ -86,6 +86,8 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
+      <item path="Control_v3.c" ex="true" overriding="false">
+      </item>
       <HI-TECH-COMP>
         <property key="additional-warnings" value="true"/>
         <property key="asmlist" value="true"/>
