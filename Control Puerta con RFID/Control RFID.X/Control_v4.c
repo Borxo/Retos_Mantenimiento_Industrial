@@ -2,7 +2,7 @@
  * Programa: Control_RFID. 
  * Microcontrolador: PIC16F1936.
  * Autor: Borxo García.
- * Versión:1.0v.
+ * Versión:1.3v.
  */
 
 //Palabras de configuración
@@ -40,25 +40,26 @@ volatile int U=0;
 //Funciones//
 void interrupt Recept (void);
 
+//Función de Interrupción//
 void interrupt Recept (void)
-{
-    static char i=0; 
+{   
+    //Variables de la Interrupción//
+    static char i=0;  
     static char Flag=0;
     
-    if (Flag==0)
+    if (Flag==0)         //Espera a que llegue el bit de inicio.
     {
     while(RCREG==0x02);
-    Flag=1;
+    Flag=1;              //Cuando llega pone a uno Flag.
     }    
-    if (Flag==1)
+    if (Flag==1)        
     {
-        Buffer[i]=RCREG;
-        TXREG=Buffer[i];
-        if(++i==13)
-        {
-        i=0;
-        Flag=0;
-        U=1;
+        Buffer[i]=RCREG;  //Guarda los datos del registro RCREG en un Buffer. 
+        if(++i==13)       //Cuando todos los datos se han guardado.
+        {                  
+        i=0;              //Se reinicia la variable i y el flag.
+        Flag=0;          
+        U=1;              //Se pone la variable U.
         }
         else;
     }
@@ -66,43 +67,19 @@ void interrupt Recept (void)
 
 void main (void)
 {
-     //Variables Locales//
-    /*char ContraAsiic [3][12]={
-                                {'0','A','0','0','6','D','F','8','C','4','5','B'},
-                                {'0','A','0','0','6','D','7','A','B','D','A','0'},
-                                {'0','C','0','0','4','1','D','C','8','9','1','8'}
-                            };*/
-    /*char ContraHex[2][14]=   {
-                                {0x02,0x30,0x41,0x30,0x30,0x36,0x44,0x46,0x38,0x43,0x34,0x35,0x42,0x03},
-                                {0x02,0x30,0x41,0x30,0x30,0x36,0x44,0x37,0x41,0x42,0x44,0x41,0x30,0x03},
-                            };*/
-    /*char ContraHex[2][13]=   {
-                                {0x30,0x41,0x30,0x30,0x36,0x44,0x46,0x38,0x43,0x34,0x35,0x42,0x03},
-                                {0x30,0x41,0x30,0x30,0x36,0x44,0x37,0x41,0x42,0x44,0x41,0x30,0x03},
-                            };*/
-    /*char ContraHex[3][14]=   {
-                                {0x02,0x30,0x41,0x30,0x30,0x36,0x44,0x46,0x38,0x43,0x34,0x35,0x42,0x03},
-                                {0x02,0x30,0x41,0x30,0x30,0x36,0x44,0x37,0x41,0x42,0x44,0x41,0x30,0x03},
-                                {0x02,0x30,0x43,0x30,0x30,0x34,0x31,0x44,0x43,0x38,0x39,0x31,0x38,0x03}
-                            };*/
-    int comp=0;
-    //char com1[14]={0x02,0x30,0x41,0x30,0x30,0x36,0x44,0x46,0x38,0x43,0x34,0x35,0x42,0x03};
-    char com2[13]={0,0,0,0,0,0,0,0,0,0,0,0,0};
     //Configuración Puertos//
-    TRISC7=1;
-    TRISC4=0;
-    TRISC5=0;
-    //TRISA=0x00;
-    //Configuración EUSART//
+    TRISC7=1; //Pin Recepción EUSART.
+    TRISC4=0; //Led Rojo.
+    TRISC5=0; //Led verde y cerradura.
+    //Configuración EUSART para recepción//
     CREN=1;
     SYNC=0;
     SPEN=1; 
     
-    //Configuración Baudios//
+    //Configuración Baudios 9600(16bits)//
     BRGH=1;
     BRG16=1;
     SPBRG=103;
-    TXEN = 1;
     
     //Cnfiguración Interrupción EUSART//
     GIE=1;
@@ -114,57 +91,42 @@ void main (void)
 
     while (1)
     {
-        if (Busqueda()==0)
+        if (Busqueda()==0)      //Si el valor devuelto de la función es 0.
         {
-            //PORTA=0b00000001;
-            
-            
-            PORTC=0b00010000;
-            __delay_ms(1000);
-            PORTC=0x00;
-            
+            PORTC=0b00010000;   //Activa el pin RC4.
+            __delay_ms(3000);   //Espera 3 Segundos. 
+            PORTC=0x00;         //Pone a 0 el puerto C.
         }
         
-        else if(Busqueda()==1)
+        else if(Busqueda()==1)  //Si el valor devuelto de la función es 1.
         {
-            //PORTA=0b00000010;
-            
-            PORTC=0b00100000;
-            __delay_ms(3000);
-            PORTC=0x00;
-           
+            PORTC=0b00100000;  //Activa el pin RC5.
+            __delay_ms(3000);  //Espera 3 Segundos.
+            PORTC=0x00;        //Pone a 0 el puerto C.  
         }
     }
 }
 
 int Busqueda ()
 {   
+    //Variables locales//
     int comp=0;
     int x=0;
-    char ContraHex[2][13]=   {
+    char ContraHex[2][13]=   {          //Almacen de claves que activan la cerradura.
                                 {0x30,0x41,0x30,0x30,0x36,0x44,0x46,0x38,0x43,0x34,0x35,0x42,0x03},
-                                {0x30,0x41,0x30,0x30,0x36,0x44,0x37,0x41,0x42,0x44,0x41,0x30,0x03},
+                                {0x30,0x41,0x30,0x30,0x36,0x44,0x37,0x41,0x42,0x44,0x41,0x30,0x03}
                             };
-    PORTA=0x00; 
-    
-    //memset(Buffer,'\0',13);
-    U=0;
-    while(U==0);
-    
-    /*while(comp!=0 && y>2)
-    {
-       comp=strncmp ( ContraHex[y], Buffer,13); 
-       y++;
-    }*/
-    do { 
+    U=0;         //Reinicia la variable U.
+    while(U==0); //Espera a que se recogan todos los datos de la EUSART.
+    do {         //Compara las cadenas almacenadas con la cadena del buffer.
            comp=strncmp ( ContraHex[x], Buffer,13);
            if(++x==2)x=0;
-        } while(comp!=0 && x>0);
-    
-    if(comp==0)
-    {
+        } while(comp!=0 && x>0); // Si existe la clave pone comp=0 y sino un
+                                 // numero mayor que 0.
+    if(comp==0)                  //Si comp==0 devuelve un 1. 
+    {                            
         return (1);
     }
-    else return (0);
+    else return (0);             //Si es distinto a 0 devuelve un 0.
     
 }
